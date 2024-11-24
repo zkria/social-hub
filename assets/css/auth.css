@@ -1,0 +1,222 @@
+/* صفحة تسجيل الدخول */
+.auth-page {
+    min-height: 100vh;
+    background: var(--bg-secondary);
+}
+
+.auth-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/* قسم الترحيب */
+.welcome-section {
+    background: var(--bg-gradient);
+    color: var(--text-light);
+    padding: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-content {
+    max-width: 480px;
+}
+
+.welcome-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.ai-features-list {
+    margin-top: var(--spacing-xl);
+}
+
+.ai-features-list .feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.ai-features-list .feature i {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* نموذج تسجيل الدخول */
+.auth-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    background: var(--bg-primary);
+}
+
+.auth-form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.auth-logo {
+    width: 120px;
+    margin-bottom: var(--spacing-md);
+}
+
+.auth-form .form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.auth-form .input-group {
+    position: relative;
+}
+
+.auth-form .input-group input {
+    width: 100%;
+    padding: var(--spacing-md);
+    padding-right: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.auth-form .input-group i {
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.social-login {
+    margin-top: var(--spacing-xl);
+}
+
+.separator {
+    text-align: center;
+    position: relative;
+    margin: var(--spacing-lg) 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: var(--border-color);
+}
+
+.separator::before { right: 0; }
+.separator::after { left: 0; }
+
+.btn-google {
+    width: 100%;
+    background: white;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    color: var(--text-secondary);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* إضافة تحسينات للتجاوب */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .welcome-section {
+        padding: 1.5rem;
+    }
+
+    .welcome-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .auth-form-section {
+        padding: 1.5rem;
+    }
+
+    .auth-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-group input {
+        padding: 0.7rem 1rem;
+    }
+
+    .btn {
+        padding: 0.7rem;
+    }
+}
+
+/* تحسينات إضافية للتصميم */
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
+}
+
+.input-group input:hover {
+    border-color: var(--secondary-color);
+}
+
+/* تأثيرات حركية */
+.btn, .input-group input, .toggle-password {
+    transition: all 0.3s ease;
+}
+
+/* تحسين قراءة النصوص */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* تحسين الظلال */
+.auth-container {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+} 

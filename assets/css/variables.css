@@ -1,0 +1,68 @@
+:root {
+    /* الألوان الرئيسية من الشعار */
+    --primary-gradient: linear-gradient(135deg, #0A4D68 0%, #088395 50%, #05BFAE 100%);
+    --primary-dark: #0A4D68;    /* أزرق داكن */
+    --primary-medium: #088395;  /* أزرق متوسط */
+    --primary-light: #05BFAE;   /* أخضر فاتح */
+    
+    /* ألوان إضافية */
+    --white: #ffffff;
+    --gray-50: #f8f9fa;
+    --gray-100: #f1f3f5;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #868e96;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+
+    /* ألوان الواجهة */
+    --bg-primary: var(--white);
+    --bg-secondary: var(--gray-50);
+    --text-primary: var(--gray-900);
+    --text-secondary: var(--gray-700);
+    --border-color: var(--gray-200);
+
+    /* الظلال */
+    --shadow-sm: 0 2px 4px rgba(10, 77, 104, 0.05);
+    --shadow-md: 0 4px 6px rgba(10, 77, 104, 0.1);
+    --shadow-lg: 0 10px 15px rgba(10, 77, 104, 0.1);
+    
+    /* المسافات */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* الحدود */
+    --border-radius-sm: 4px;
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    
+    /* التحولات */
+    --transition: all 0.3s ease;
+}
+
+/* الوضع الداكن */
+[data-theme="dark"] {
+    --bg-primary: #1a1f36;
+    --bg-secondary: #151931;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --border-color: #2d3748;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    
+    /* ألوان إضافية للوضع الداكن */
+    --primary-color: #4299e1;
+    --secondary-color: #2b6cb0;
+    --accent-color: #00a3ff;
+    
+    /* خلفيات إضافية */
+    --bg-gradient: linear-gradient(135deg, #1a1f36, #151931);
+    --input-bg: #2d3748;
+} 

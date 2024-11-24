@@ -1,0 +1,95 @@
+/* متغيرات الألوان للوضع الفاتح */
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #009688;
+    --background-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --text-color: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #e9ecef;
+    --button-hover: #388e3c;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* متغيرات الألوان للوضع الداكن */
+.dark-mode {
+    --primary-color: #66bb6a;
+    --secondary-color: #4db6ac;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #e9ecef;
+    --text-secondary: #adb5bd;
+    --border-color: #2d2d2d;
+    --button-hover: #4caf50;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* تطبيق الألوان على العناصر */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-header {
+    background-color: var(--surface-color);
+    border-color: var(--border-color);
+}
+
+.search-btn {
+    background-color: var(--surface-color);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.theme-btn {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.home-link,
+.back-btn {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* تحسين التباين في الوضع الداكن */
+.dark-mode .btn-primary {
+    background-color: var(--primary-color);
+    color: #000000;
+}
+
+.dark-mode .theme-btn:hover,
+.dark-mode .home-link:hover,
+.dark-mode .back-btn:hover {
+    background-color: var(--primary-color);
+    color: #000000;
+}
+
+.dark-mode .search-btn {
+    border-color: var(--border-color);
+}
+
+.dark-mode .search-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* تحسين القراءة */
+.dark-mode {
+    font-weight: 400;
+}
+
+/* تأثيرات حركية */
+.theme-btn i,
+.btn,
+.search-btn,
+.home-link,
+.back-btn {
+    transition: all 0.3s ease;
+} 
