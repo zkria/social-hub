@@ -1,0 +1,143 @@
+/* الشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* الشاشات المتوسطة */
+@media (max-width: 992px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section {
+        display: none;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: fixed;
+        right: -240px;
+        top: 0;
+        height: 100vh;
+        transition: var(--transition);
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        right: 0;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .auth-buttons .btn-login {
+        display: none;
+    }
+
+    .theme-switch-wrapper {
+        margin-left: 10px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* الشاشات الصغيرة جداً */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-form-container {
+        padding: var(--spacing-md);
+    }
+
+    .setup-container {
+        padding: var(--spacing-sm);
+    }
+
+    .progress-steps {
+        flex-direction: column;
+    }
+
+    .step {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* تحسينات للطباعة */
+@media print {
+    .main-nav,
+    .sidebar,
+    .footer {
+        display: none;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        break-inside: avoid;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-actions {
+        gap: 5px;
+    }
+
+    .auth-buttons .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,144 @@
+/* أنماط الخطوط الرئيسية */
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+/* العنوان الرئيسي Hero */
+.hero-title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* النص الفرعي تحت العنوان الرئيسي */
+.hero-subtitle {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--white);
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* أنماط القائمة الرئيسية */
+.main-nav {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+/* الأزرار */
+.btn {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* الوضع الداكن */
+[data-theme="dark"] {
+    /* النصوص في الوضع الداكن */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.9);
+    --text-muted: rgba(255, 255, 255, 0.7);
+    
+    /* ألوان مميزة للعناوين */
+    --heading-color: #05BFAE;
+    --link-color: #05BFAE;
+    --link-hover: #00d4c0;
+}
+
+[data-theme="dark"] .hero-title {
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .hero-subtitle {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .nav-links a {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .nav-links a:hover {
+    color: var(--link-hover);
+}
+
+/* تحسينات إضافية للوضوح */
+.text-gradient {
+    background: linear-gradient(135deg, #05BFAE 0%, #088395 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-emphasis {
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+/* أنماط النصوص المقتبسة */
+.quote-text {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--white);
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.quote-author {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* تحسين وضوح النصوص على الخلفيات */
+.overlay-text {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* تباين محسن للنصوص الصغيرة */
+.small-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .small-text {
+    color: var(--text-secondary);
+} 

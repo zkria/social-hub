@@ -1,27 +1,133 @@
-:: حذف المحتوى القديم وإضافة محتوى جديد
-echo ^
-<!DOCTYPE html^
-<html lang="ar" dir="rtl">^
-<head>^
-    <meta charset="UTF-8">^
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">^
-    <title>إعداد الملف الشخصي | Social Hub</title>^
-    <link rel="stylesheet" href="assets/css/styles.css">^
-</head>^
-<body>^
-    <div class="step completed">^
-        <div class="step-icon-wrapper">^
-            <div class="step-icon">^
-                <i class="fas fa-user"></i>^
-                <div class="progress-ring">^
-                    <svg viewBox="0 0 100 100">^
-                        <circle class="ring-bg" cx="50" cy="50" r="45"/>^
-                        <circle class="ring-progress" cx="50" cy="50" r="45"/>^
-                    </svg>^
-                </div>^
-            </div>^
-            <div class="step-number">1</div>^
-        </div>^
-    </div>^
-</body>^
-</html> > index.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="منصة عطار - إدارة ذكية لحسابات التواصل الاجتماعي باستخدام الذكاء الاصطناعي">
+    <title>عطار - إدارة ذكية لمواقع التواصل الاجتماعي</title>
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- ملفات CSS -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header class="main-header">
+        <div class="top-nav">
+            <div class="container">
+                <div class="top-nav-content">
+                    <!-- الشعار -->
+                    <a href="/" class="logo">
+                        <img src="assets/images/logo.svg" alt="عطار">
+                    </a>
+
+                    <!-- القائمة اليمنى -->
+                    <div class="nav-right">
+                        <a href="/" class="home-link">
+                            <i class="fas fa-home"></i>
+                            الرئيسية
+                        </a>
+                        <button class="back-btn">
+                            <i class="fas fa-arrow-right"></i>
+                            رجوع
+                        </button>
+                    </div>
+
+                    <!-- القائمة اليسرى -->
+                    <div class="nav-left">
+                        <!-- زر البحث -->
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                            بحث سريع + Ctrl
+                        </button>
+
+                        <!-- زر تبديل المظهر -->
+                        <button class="theme-btn" aria-label="تبديل المظهر">
+                            <i class="fas fa-moon"></i>
+                        </button>
+
+                        <!-- أزرار تسجيل الدخول -->
+                        <div class="auth-buttons">
+                            <a href="/register" class="btn btn-primary">تسجيل الدخول</a>
+                            <a href="/login" class="btn btn-outline">تجربة مجانية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <!-- قسم الترحيب -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">منصة عطار</span>
+                    <h1 class="hero-title">أدر حساباتك الاجتماعية بذكاء</h1>
+                    <p class="hero-subtitle">منصة متكاملة تستخدم الذكاء الاصطناعي لإدارة وتحسين حضورك الرقمي</p>
+                    <div class="hero-actions">
+                        <a href="#start" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket"></i>
+                            ابدأ الآن مجاناً
+                        </a>
+                        <a href="#demo" class="btn btn-outline btn-lg">
+                            <i class="fas fa-play-circle"></i>
+                            شاهد كيف تعمل
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الإحصائيات -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="stat-number" data-count="11046996">11,046,996</div>
+                        <div class="stat-label">لأصحاب الأعمال</div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="stat-number" data-count="2206678">2,206,678</div>
+                        <div class="stat-label">للموظفين</div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="stat-number" data-count="9000000">9,000,000+</div>
+                        <div class="stat-label">لمقدمي الخدمات</div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="stat-number" data-count="97600627">97,600,627</div>
+                        <div class="stat-label">SocialSense AI</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/stats-counter.js" defer></script>
+</body>
+</html>

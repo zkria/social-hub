@@ -1,0 +1,154 @@
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+/* إخفاء مربع الاختيار الافتراضي */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.switch-container {
+    position: relative;
+    width: 64px;
+    height: 32px;
+    background: #1a1f36;
+    border-radius: 20px;
+    padding: 3px;
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    overflow: hidden; /* لمنع ظهور العناصر خارج الحدود */
+    display: flex;
+    align-items: center;
+}
+
+/* تحسين شكل الدائرة */
+.switch-circle {
+    position: absolute;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* تحسين القمر والنجوم */
+.switch-night {
+    position: absolute;
+    right: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    z-index: 1;
+}
+
+.moon {
+    font-size: 12px;
+    color: #ffd700;
+}
+
+.star {
+    font-size: 6px;
+    color: #ffd700;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* تحسين حالة التبديل */
+input:checked + .switch-container {
+    background: #151931;
+    border-color: #2d3748;
+}
+
+input:checked + .switch-container .switch-circle {
+    transform: translateX(32px);
+    background: #ffffff;
+}
+
+input:checked + .switch-container .star {
+    opacity: 1;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+/* إضافة تأثير وميض للنجوم */
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* تحسين تأثير التحويم */
+.switch-container:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.switch-container:hover .switch-circle {
+    box-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* تنسيق النجوم بشكل مختلف */
+.star:nth-child(1) { 
+    font-size: 8px; 
+    animation-delay: 0s;
+}
+.star:nth-child(2) { 
+    font-size: 6px; 
+    animation-delay: 0.3s;
+}
+.star:nth-child(3) { 
+    font-size: 7px; 
+    animation-delay: 0.6s;
+}
+
+/* تحسين المظهر في الوضع الداكن */
+[data-theme="dark"] .switch-container {
+    background: #151931;
+    border-color: #2d3748;
+}
+
+[data-theme="dark"] .switch-circle {
+    background: #ffffff;
+}
+
+/* تحسين التأثيرات الحركية */
+.switch-container, .switch-circle, .star {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* تحسين تنسيق شريط التنقل */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* تحسين الأزرار */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* الوضع الداكن */
+[data-theme="dark"] {
+    --bg-primary: #1a1f36;
+    --bg-secondary: #151931;
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --border-color: #2d3748;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+} 

@@ -1,0 +1,143 @@
+/* متغيرات التصميم */
+:root {
+    --header-height: 120px;
+    --top-nav-height: 70px;
+    --sub-nav-height: 50px;
+    --primary-color: #05BFAE;
+    --primary-dark: #088395;
+    --text-color: #2D3436;
+    --border-color: #E2E8F0;
+    --bg-hover: #F8FAFC;
+}
+
+/* رأس الصفحة */
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+/* القائمة العلوية */
+.top-nav {
+    height: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.top-nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 100%;
+}
+
+/* الشعار */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 35px;
+    width: auto;
+}
+
+/* القائمة اليمنى */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home-link,
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* القائمة اليسرى */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* زر البحث */
+.search-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #fff;
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* زر تبديل المظهر */
+.theme-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #f5f5f5;
+    color: #666;
+    cursor: pointer;
+}
+
+/* أزرار تسجيل الدخول */
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #05BFAE;
+    color: #fff;
+}
+
+.btn-outline {
+    border: 1px solid #05BFAE;
+    color: #05BFAE;
+    background: transparent;
+}
+
+/* تجاوب الموبايل */
+@media (max-width: 768px) {
+    .search-btn span {
+        display: none;
+    }
+    
+    .nav-right {
+        display: none;
+    }
+} 
